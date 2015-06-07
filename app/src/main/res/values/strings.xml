@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">StopwatchCompanion</string>
+    <string name="app_name">Stopwatch Companion</string>
     <string name="listener_service_name">PebbleListenerService</string>
-    <string name="title_activity_intro">IntroActivity</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_intro">Stopwatch for Pebble</string>
     <string name="action_settings">Settings</string>
+    <string name="pebble_connected">Pebble is connected!</string>
+    <string name="pebble_not_connected">Pebble is not connected!</string>
 
 </resources>

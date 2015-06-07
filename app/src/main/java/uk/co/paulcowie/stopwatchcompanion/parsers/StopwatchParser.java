@@ -1,7 +1,7 @@
-package uk.co.paulcowie.stopwatchcompanion;
+package uk.co.paulcowie.stopwatchcompanion.parsers;
 
 /**
- * Created by paul on 07/06/15.
+ * Parses time in milliseconds, giving a timestamp
  */
 public class StopwatchParser {
     private long time_ms;
@@ -22,6 +22,9 @@ public class StopwatchParser {
         return time_ms;
     }
 
+    /**
+     * @return Timestamp in form mm:ss:cc
+     */
     public String parse_ms(){
         long temp = time_ms;
 
