@@ -8,4 +8,7 @@
     <string name="pebble_connected">Pebble is connected!</string>
     <string name="pebble_not_connected">Pebble is not connected!</string>
 
+    <string name="timestamp_subject">Stopwatch Time</string>
+    <string name="send_to">Send time to…</string>
+
 </resources>

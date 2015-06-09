@@ -36,15 +36,17 @@ public class PebbleReceiveListener extends BroadcastReceiver {
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
         sendIntent.putExtra(Intent.EXTRA_TEXT, timestamp);
+        sendIntent.putExtra(Intent.EXTRA_SUBJECT, context.getResources().getText(R.string.timestamp_subject));
         sendIntent.setType("text/plain");
-        sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK       |
-                            Intent.FLAG_ACTIVITY_CLEAR_TASK     |
-                            Intent.FLAG_FROM_BACKGROUND
-        );
 
         Log.v(LOG_TAG, "Sending timestamp intent: " + timestamp);
-        context.startActivity(sendIntent);
 
+        Intent chooser = Intent.createChooser(sendIntent, context.getResources().getText(R.string.send_to));
+        chooser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK  |
+                        Intent.FLAG_FROM_BACKGROUND
+        );
+
+        context.startActivity(chooser);
     }
 
     /**
